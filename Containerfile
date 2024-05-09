@@ -55,7 +55,8 @@ RUN mkdir -p /var/lib/alternatives && \
     ostree container commit
 
 RUN sed -i '/^PRETTY_NAME/s/Kinoite/Starlight/' /usr/lib/os-release && \
-    sed -i '/^LOGO/s/fedora-logo-icon/a-deer/' /usr/lib/os-release && \
+    sed -i '/^LOGO/s/fedora-logo-icon/system-logo-white/' /usr/lib/os-release && \
+    sed -i '/^VERSION/s/Kinoite/Starlight/' /usr/lib/os-release && \
     ostree container commit
 
 ## NOTES:
