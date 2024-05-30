@@ -15,7 +15,7 @@
 # - "base"
 #
 #  "aurora", "bazzite", "bluefin" or "ucore" may also be used but have different suffixes.
-ARG SOURCE_IMAGE="kinoite"
+ARG SOURCE_IMAGE="silverblue"
 
 ## SOURCE_SUFFIX arg should include a hyphen and the appropriate suffix name
 # These examples all work for silverblue/kinoite/sericea/onyx/lazurite/vauxite/base
@@ -54,10 +54,10 @@ RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
 
-RUN sed -i '/^PRETTY_NAME/s/Kinoite/Starlight/' /usr/lib/os-release && \
+RUN sed -i '/^PRETTY_NAME/s/Silverblue/Starlight/' /usr/lib/os-release && \
     sed -i '/^LOGO/s/fedora-logo-icon/system-logo-white/' /usr/lib/os-release && \
-    sed -i '/^VERSION/s/Kinoite/Starlight/' /usr/lib/os-release && \
-    sed -i '/^VARIANT/s/Kinoite/Starlight/' /usr/lib/os-release && \
+    sed -i '/^VERSION/s/Silverblue/Starlight/' /usr/lib/os-release && \
+    sed -i '/^VARIANT/s/Silverblue/Starlight/' /usr/lib/os-release && \
     ostree container commit
 
 ## NOTES:
